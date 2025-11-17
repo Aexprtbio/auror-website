@@ -32,6 +32,12 @@ body {
   border-bottom: 2px solid #195a9b;
 }
 
+.xp-titlebar.red {
+  background: linear-gradient(90deg, #a02c2c 0%, #ff7f2a 100%);
+  border-bottom: ;
+
+}
+
 /* --- Boutons de fenêtre (min/max/fermer) --- */
 .xp-titlebar .xp-buttons {
   display: flex;
@@ -53,31 +59,17 @@ body {
   color: #444;
 }
 
-.xp-btn-large {
+.xp-btn.large{
   width: 124px;
   height: 50px;
-  box-shadow: inset 1px 1px 0 #fff8, inset -1px -1px 1px #5555;
-  border: 1px solid #888;
-  border-radius: 0;
-  background: #e9e7e3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 0.95em;
-  font-weight: bold;
-  color: #444;
 }
+
 
 .xp-btn:hover {
   background: #e7c873;
   border: 1px solid #d7ad00;
 }
 
-.xp-btn-large:hover {
-  background: #e7c873;
-  border: 1px solid #d7ad00;
-}
 
 
 /* --- Contenu de fenêtre --- */
