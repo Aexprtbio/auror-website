@@ -1,0 +1,39 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Blog</title>
+  <link rel="icon" type="image/x-icon" href="favsit.ico">
+  <link rel="stylesheet" href="aurore.css">
+
+<script>
+function toggleWindow(btn) {
+  // Trouve le parent .xp-window
+  let windowDiv = btn.closest('.xp-window');
+  // Trouve le contenu à cacher/réafficher
+  let contentDiv = windowDiv.querySelector('.xp-content');
+  // Toggle
+  if (contentDiv.style.display === "none") {
+    contentDiv.style.display = "block";
+    btn.textContent = "_"; // Restaure le bouton "min"
+  } else {
+    contentDiv.style.display = "none";
+    btn.textContent = "▾"; // Change l'icône pour "restaurer"
+  }
+}
+</script>
+
+
+<div class="xp-window" style="margin-top: 110px;">
+  <div class="xp-titlebar">
+    <span>18 Novembre 2025 - Présentations </span>
+    <div class="xp-buttons">
+      <div class="xp-btn" onclick="toggleWindow(this)">_</div>
+      <div class="xp-btn">□</div>
+      <div class="xp-btn">×</div>
+    </div>
+  </div>
+  <div class="xp-content">
+      <div class="xp-content" style="text-align: center; background: #ffffff;">
+    <a data-flickr-embed="true" href="https://www.flickr.com/photos/203902423@N08/54931969742/in/dateposted-public/" title="0806_001"><img src="https://live.staticflickr.com/65535/54931969742_33f17fc58e_b.jpg" width="400" alt="0806_001"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  </div>
+  </div>
+</div>
