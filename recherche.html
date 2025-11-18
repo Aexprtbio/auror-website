@@ -4,16 +4,34 @@
   <link rel="icon" type="image/x-icon" href="favsit.ico">
   <link rel="stylesheet" href="aurore.css">
 
+<script>
+function toggleWindow(btn) {
+  // Trouve le parent .xp-window
+  let windowDiv = btn.closest('.xp-window');
+  // Trouve le contenu à cacher/réafficher
+  let contentDiv = windowDiv.querySelector('.xp-content');
+  // Toggle
+  if (contentDiv.style.display === "none" || contentDiv.style.display === "") {
+    contentDiv.style.display = "block";
+    btn.textContent = "_"; // Restaure le bouton "min"
+  } else {
+    contentDiv.style.display = "none";
+    btn.textContent = "▾"; // Change l'icône pour "restaurer"
+  }
+}
+
+</script>
+
 <div class="xp-window">
   <div class="xp-titlebar red">
     <span>Apis mellifera, une abeille indigène (en partie)</span>
     <div class="xp-buttons">
-      <div class="xp-btn">_</div>
+      <div class="xp-btn" onclick="toggleWindow(this)">▾</div>
       <div class="xp-btn">□</div>
       <div class="xp-btn">×</div>
     </div>
   </div>
-  <div class="xp-content">
+  <div class="xp-content" style="display: none;">
     <p style="text-align: center; color: darkblue;">Résumé</p>
     <p>
 Les pollinisateurs sont en déclin, en diversité comme en abondance. Le service de pollinisation soutient pourtant 78 à 98% des plantes sauvages et 76% des plantes de cultures. Les insectes sont les principaux pollinisateurs et parmi eux Apis mellifera est particulièrement importante pour les cultures et plantes sauvages. Domestiquée en ruchers, l’abeille mellifère fait également partie du cortège d’insectes sauvages. Ces populations sauvages sont aujourd’hui peu connues, au point que A. mellifera est classée "Données manquantes" sur la liste rouge de l’UICN. Ce stage vise donc à étudier des colonies d’abeilles mellifères vivant dans des zones naturelles françaises pour aider à établir un statut de conservation IUCN.
@@ -32,14 +50,70 @@ densité, observer les choix des ressources florales et l’abondance d’A. mel
 
 <div class="xp-window">
   <div class="xp-titlebar red">
-    <span>Apis mellifera et les pollinisateurs sauvages</span>
+    <span>But de l'étude</span>
     <div class="xp-buttons">
-      <div class="xp-btn">_</div>
+      <div class="xp-btn" onclick="toggleWindow(this)">▾</div>
       <div class="xp-btn">□</div>
       <div class="xp-btn">×</div>
     </div>
   </div>
-  <div class="xp-content">
+  <div class="xp-content" style="display: none;">
+    <p>
+Cette étude vise à documenter, pour la première fois, des paramètres démographiques, de
+partage de ressource et de génétique des colonies d’A. mellifera vivant à l’état sauvage en France.
+Ces données permettront d’aider à établir un statut de conservation IUCN, sachant que l’espèce
+comprend de grands enjeux de conservation. La conservation de A. mellifera vivant à l’état
+sauvage et la diversité génétique de sous-espèces et de lignées locales associées représente une
+vraie perspective de conservation de la biodiversité au même titre que les autres insectes
+pollinisateurs sauvages (Requier et al. 2019; Sgrò et al. 2011), et nécessite des données. Cette
+étude s’intègre dans un projet de recherche (TRAMETES) financé par l’Office Français de la
+Biodiversité, et se concentre sur les populations d’A. mellifera vivant à l’état sauvage dans les forêts, les cavités d’arbres représentant un des principaux sites de nidification des colonies
+sauvages d’abeilles mellifères (Requier et al. 2020). L’étude se focalise sur deux zones forestières françaises : la forêt domaniale de Loches et le Parc National de forêts dont les surfaces respectives sont de 36 et 33 km².</p>
+<p>Cette étude comprend 4 sous-objectifs. </p><p>(1) Suivre la survie des colonies vivant à l’état
+sauvage et calculer les indices démographiques des populations dans les deux zones forestières
+françaises (Kohl, Rutschmann, and Steffan-Dewenter 2022). Le passage de l’hiver est le filtre
+principal à la survie d’une colonie sauvage et est le principal déterminant du taux de survie annuel d’une colonie, calculé comme le produit de la survie d’une colonie à 3 périodes déterminantes :
+le début du printemps permettant d’observer la survie hivernale, l’été après la multiplication des colonies par essaimage et à l’automne (Kohl et al. 2022). Cette mortalité hivernale peut être particulièrement expliquée par la limitation en ressources et la compétition pour les cavités avec des prédateurs d’A. mellifera, comme le pic noir (Dryocopus martius), ou la martre (Martes
+martes), (Kohl et al. 2023). Dans les zones naturelles allemandes, la survie annuelle est de 10,6%, accompagnée d’une recolonisation printanière durant la période d’essaimage (Kohl et al. 2022).
+Nous déterminerons les mêmes paramètres de survie dans les zones naturelles françaises.
+</p>
+<p>(2) Détecter de nouvelles colonies afin de mieux estimer leur densité. D’après les plus
+récentes études, la densité naturelle de colonies en Europe est en moyenne de 0.17 colonie par
+km² en se basant sur la littérature récente existante (Kohl et al. 2022, Rutschmann et al. 2022,
+Oleksa et al. 2013). Nous avons réalisé ce suivi de terrain, grâce à l’application d’une technique
+similaire à la Capture Marquage Recapture (CMR) : le Bee Lining. Nous avons également pu
+utiliser les positions estimées en 2022 des colonies pour la recherche en 2023. Nous estimerons
+les densités de colonies dans les deux zones forestières françaises, et les comparerons avec ces
+données de littérature. </p>
+<p>(3) Améliorer les connaissances portant sur l’écologie et le partage des
+ressources florales de Apis mellifera avec les pollinisateurs sauvages. A. mellifera est une espèce
+généraliste, c’est-à-dire qu’elle visite un grand nombre de taxa floraux, sans spécialisation
+(Gonzalez et al. 1995 ; Aronne et al. 2012). Les abeilles sélectionnent cependant la ressource
+florale, visant en priorité des ressources de qualité et en quantité, et privilégiant l’efficacité de
+récolte (Bartholdi et al. 1993 ; Nielsen et al. 2012 ; Wells et al. 1981). Ainsi nous émettons
+l’hypothèse que nous observerons A. mellifera en plus grande abondance sur des patchs de fleurs
+de grande taille. Également nous nous attendons à observer A. mellifera en plus grande
+abondance à faibles distances des colonies, et dans un environnement dense en colonies.</p>
+<p>(4) Déterminer les lignées génétiques des colonies, à savoir étudier leur origine locale. Il est admis
+que les sous-espèces de A. mellifera se répartissent en 5 lignées évolutives, les lignées A, M, C, O et Y (Ilyasov et al. 2020). En France, la sous-espèce locale de l’abeille mellifère est l’abeille noire, Apis mellifera subsp. mellifera, qui appartient à la lignée évolutive M. En apiculture cependant, d’autres sous-espèces et hybrides peuvent être élevées, comme l’abeille italienne, l’abeille carnolienne ou l’hybride Buckfast, toutes trois de la lignée évolutive C. Les sous-espèces de lignée A se retrouvent en Afrique et au Moyen-Orient, la lignée O se retrouve dans le Moyen-Orient et l’Europe de l’est. La lignée Y est retrouvée dans la péninsule arabique (Requier et al. 2019; Ilyasov et al. 2020). Nous partons de l’hypothèse de départ que les colonies présenteront des haplotypes mitochondriaux de lignée M ou C, majoritaires en France. Nous mesurerons également le taux d’hybridation des lignées via l’analyse de marqueurs microsatellites. Nous pourrons considérer les résultats des analyses pour déterminer le taux d’introgression génétique (dite "pollution génétique") des abeilles domestiques chez les colonies sauvages.
+    </p>
+
+  </div>
+</div>
+
+
+
+
+<div class="xp-window">
+  <div class="xp-titlebar red">
+    <span>Apis mellifera et les pollinisateurs sauvages</span>
+    <div class="xp-buttons">
+      <div class="xp-btn" onclick="toggleWindow(this)">▾</div>
+      <div class="xp-btn">□</div>
+      <div class="xp-btn">×</div>
+    </div>
+  </div>
+  <div class="xp-content" style="display:none;">
     <p>Apis mellifera est reconnue depuis longtemps comme visitant une grande variété de taxa
 floraux <i>(Gonzalez et al. 1995; Aronne et al. 2012)</i>, allant même butiner le pollen de plantes
 anémogames <i>(Suryanarayana et al. 1992)</i>. La valeur d’un patch de fleurs pour une abeille

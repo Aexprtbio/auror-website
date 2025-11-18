@@ -4,11 +4,29 @@
   <link rel="icon" type="image/x-icon" href="favsit.ico">
   <link rel="stylesheet" href="aurore.css">
 
+<script>
+function toggleWindow(btn) {
+  // Trouve le parent .xp-window
+  let windowDiv = btn.closest('.xp-window');
+  // Trouve le contenu à cacher/réafficher
+  let contentDiv = windowDiv.querySelector('.xp-content');
+  // Toggle
+  if (contentDiv.style.display === "none") {
+    contentDiv.style.display = "block";
+    btn.textContent = "_"; // Restaure le bouton "min"
+  } else {
+    contentDiv.style.display = "none";
+    btn.textContent = "▾"; // Change l'icône pour "restaurer"
+  }
+}
+</script>
+
+
 <div class="xp-window" style="margin-top: 160;">
   <div class="xp-titlebar">
     <span>!!!!!</span>
     <div class="xp-buttons">
-      <div class="xp-btn">_</div>
+      <div class="xp-btn" onclick="toggleWindow(this)">_</div>
       <div class="xp-btn">□</div>
       <div class="xp-btn">×</div>
     </div>
@@ -28,7 +46,7 @@
   <div class="xp-titlebar">
     <span>Chroniques d'une sorcière malade</span>
     <div class="xp-buttons">
-      <div class="xp-btn">_</div>
+      <div class="xp-btn" onclick="toggleWindow(this)">_</div>
       <div class="xp-btn">□</div>
       <div class="xp-btn">×</div>  
   </div> 
@@ -48,7 +66,7 @@
   <div class="xp-titlebar">
     <span>Mes derniers morceaux !</span>
     <div class="xp-buttons">
-      <div class="xp-btn">_</div>
+      <div class="xp-btn" onclick="toggleWindow(this)">_</div>
       <div class="xp-btn">□</div>
       <div class="xp-btn">×</div>  
   </div> 
