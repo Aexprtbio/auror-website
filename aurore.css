@@ -5,6 +5,8 @@ body {
   background-size: cover;           /* L’image remplit tout l’écran */
   background-repeat: repeat;     /* Pas de répétition */
   background-position: center;      /* Centré */
+  background-attachment: fixed;
+
   color: #222;
 }
 
