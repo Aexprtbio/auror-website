@@ -1,0 +1,54 @@
+<head>
+  <meta charset="UTF-8">
+  <title>QRCode et Sorcières</title>
+  <link rel="icon" type="image/x-icon" href="favsit.ico">
+  <link rel="stylesheet" href="aurore.css">
+
+<script>
+function toggleWindow(btn) {
+  // Trouve le parent .xp-window
+  let windowDiv = btn.closest('.xp-window');
+  // Trouve le contenu à cacher/réafficher
+  let contentDiv = windowDiv.querySelector('.xp-content');
+  // Toggle
+  if (contentDiv.style.display === "none") {
+    contentDiv.style.display = "block";
+    btn.textContent = "_"; // Restaure le bouton "min"
+  } else {
+    contentDiv.style.display = "none";
+    btn.textContent = "▾"; // Change l'icône pour "restaurer"
+  }
+}
+</script>
+
+
+<div class="xp-window" style="margin-top: 160;">
+  <div class="xp-titlebar">
+    <span>Générateur de QR Code</span>
+    <div class="xp-buttons">
+      <div class="xp-btn" onclick="toggleWindow(this)">_</div>
+      <div class="xp-btn">□</div>
+      <div class="xp-btn">×</div>
+    </div>
+  </div>
+<div class="qr-app">
+  <input id="qr-text" type="text" placeholder="Texte ou URL à encoder">
+  
+  <label>Couleur des carrés :
+    <input id="qr-dark" type="color" value="#000000">
+  </label>
+
+  <label>Couleur de fond :
+    <input id="qr-light" type="color" value="#ffffff">
+  </label>
+
+  <button id="qr-generate">Générer</button>
+
+  <div id="qrcode"></div>
+</div>
+</div>
+
+
+<!-- Librairie qrcode.js via CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="app.js"></script>
