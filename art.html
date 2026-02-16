@@ -1,0 +1,59 @@
+<head>
+  <meta charset="UTF-8">
+  <title>insert titeule</title>
+  <link rel="icon" type="image/x-icon" href="favsit.ico">
+  <link rel="stylesheet" href="aurore.css">
+
+<script>
+function toggleWindow(btn) {
+  // Trouve le parent .xp-window
+  let windowDiv = btn.closest('.xp-window');
+  // Trouve le contenu à cacher/réafficher
+  let contentDiv = windowDiv.querySelector('.xp-content');
+  // Toggle
+  if (contentDiv.style.display === "none" || contentDiv.style.display === "") {
+    contentDiv.style.display = "block";
+    btn.textContent = "_"; // Restaure le bouton "min"
+  } else {
+    contentDiv.style.display = "none";
+    btn.textContent = "▾"; // Change l'icône pour "restaurer"
+  }
+}
+</script>
+
+
+
+<div class="xp-window-gallery" style="margin-top: 160;">
+  <div class="xp-titlebar">
+    <span> Not helping collection </span>
+    <div class="xp-buttons">
+      <div class="xp-btn" onclick="toggleWindow(this)">▾</div>
+      <div class="xp-btn">□</div>
+      <div class="xp-btn">×</div>
+    </div>
+  </div>
+  <div class="xp-content-gallery" style="display: none;"></div>
+
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/203902423@N08/55096337992/in/dateposted-public/" title="Piccole puntura"><img src="https://live.staticflickr.com/65535/55096337992_f7b6d0420e.jpg" width="375" height="500" alt="Piccole puntura"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/203902423@N08/55097212326/in/dateposted-public/" title="Piccole puntura"><img src="https://live.staticflickr.com/65535/55097212326_1d96348061.jpg" width="375" height="500" alt="Piccole puntura"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+</div>
+
+
+<div class="xp-window-gallery" style="margin-top: 160;">
+  <div class="xp-titlebar">
+    <span> Miscellaneous 2026 </span>
+    <div class="xp-buttons">
+      <div class="xp-btn" onclick="toggleWindow(this)">▾</div>
+      <div class="xp-btn">□</div>
+      <div class="xp-btn">×</div>
+    </div>
+  </div>
+
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/203902423@N08/55097419953/in/dateposted-public/" title="Piccole puntura"><img src="https://live.staticflickr.com/65535/55097419953_d363ff967e_n.jpg" width="240" height="320" alt="Piccole puntura"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/203902423@N08/55097584645/in/dateposted-public/" title="Piccole puntura"><img src="https://live.staticflickr.com/65535/55097584645_801ed4e4e7_n.jpg" width="320" height="295" alt="Piccole puntura"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+  <a data-flickr-embed="true" href="https://www.flickr.com/photos/203902423@N08/55097487094/in/dateposted-public/" title="Piccole puntura"><img src="https://live.staticflickr.com/65535/55097487094_1b57ddff39_n.jpg" width="240" height="320" alt="Piccole puntura"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+  
+</div>
